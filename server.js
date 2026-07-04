@@ -128,7 +128,7 @@ ${bodyContent}
 </footer>
 <script>
 function openApply(title){
-  window.location.href='https://remotejob09.job4intern.com/pages/job-application';
+  window.location.href='https://ruwmqs-uq.myshopify.com/pages/apply';
 }
 </script>
 </body>
@@ -170,11 +170,11 @@ app.get('/', (req, res) => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "DubaiJobs.ae",
-    "url": "https://dubaijobs.ae",
+    "url": "https://frontnova-production3.up.railway.app",
     "description": "Dubai's largest job portal with 100,000 job listings — remote and on-site across all Emirates",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://dubaijobs.ae/jobs?q={search_term_string}",
+      "target": "https://frontnova-production3.up.railway.app/jobs?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -396,7 +396,7 @@ app.get('/sitemap.xml', (req, res) => {
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
   for (let i = 1; i <= totalSitemaps; i++) {
-    xml += `\n<sitemap><loc>https://dubaijobs.ae/sitemap-${i}.xml</loc></sitemap>`;
+    xml += `\n<sitemap><loc>https://frontnova-production3.up.railway.app/sitemap-${i}.xml</loc></sitemap>`;
   }
   xml += `\n</sitemapindex>`;
   res.type('application/xml').send(xml);
@@ -410,7 +410,7 @@ app.get('/sitemap-:num.xml', (req, res) => {
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
   for (let i = start; i <= end; i++) {
-    xml += `\n<url><loc>https://dubaijobs.ae/jobs/${i}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`;
+    xml += `\n<url><loc>https://frontnova-production3.up.railway.app/jobs/${i}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`;
   }
   xml += `\n</urlset>`;
   res.type('application/xml').send(xml);
@@ -465,7 +465,7 @@ app.get('/sitemap', (req, res) => {
 app.get('/robots.txt', (req, res) => {
   res.type('text/plain').send(`User-agent: *
 Allow: /
-Sitemap: https://dubaijobs.ae/sitemap.xml
+Sitemap: https://frontnova-production3.up.railway.app/sitemap.xml
 Disallow: /api/`);
 });
 
